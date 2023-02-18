@@ -21,7 +21,7 @@ if len(Plus) % M > 0:
     target.append(Plus[(len(Plus) // M) * M])
 target =sorted(target)
 print(sum(2*target[:-1])+target[-1])
-
+#
 
 
 
