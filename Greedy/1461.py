@@ -19,7 +19,7 @@ for i in range(0, len(Plus) // M):
     target.append(Plus[i * M])
 if len(Plus) % M > 0:
     target.append(Plus[(len(Plus) // M) * M])
-target=sorted(target)
+target =sorted(target)
 print(sum(2*target[:-1])+target[-1])
 
 
