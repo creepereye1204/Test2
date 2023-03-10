@@ -1,0 +1,53 @@
+import java.util.*;
+
+class Main {
+  
+  public static class Dictionary {
+    Map<String, String> ht;
+
+    Dictionary() {
+      ht = new HashMap<String, String>();
+    };
+
+    void addWord(String Key, String Word) {
+      ht.put(Key, Word);
+
+    };
+
+    String getMeaning(String Word) {
+      return ht.get(Word);
+    }
+
+    void removeWord(String Word) {
+      ht.remove(Word);
+    }
+
+    boolean containsWord(String Word) {
+      if (ht.get(Word) != null) {
+        return true;
+      } else {
+        return false;
+      }
+
+    }
+    int getSize(){
+      return ht.size();
+    }
+
+  
+  }
+
+  public static void main(String[] args) {
+    Dictionary dictionary = new Dictionary();
+    
+    dictionary.addWord("apple", "사과");
+    dictionary.addWord("banana", "바나나");
+    dictionary.addWord("cherry", "체리");
+
+    System.out.println(dictionary.getMeaning("apple"));
+    
+    dictionary.removeWord("banana");
+    System.out.println(dictionary.containsWord("bana"));
+    System.out.println(dictionary.getSize());
+  }
+}
